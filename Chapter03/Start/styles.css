@@ -1,0 +1,489 @@
+/* --------------------------------------------------------------------------
+[EXPERIMENTAL] Multi-axis, single variable font.
+
+Slant axis is not yet widely supported (as of February 2019) and thus this
+multi-axis single variable font is opt-in rather than the default.
+
+When using this, you will probably need to set font-variation-settings
+explicitly, e.g.
+
+  * { font-variation-settings: "slnt" 0deg }
+  .italic { font-variation-settings: "slnt" 10deg }
+
+*/
+@font-face {
+    font-family: "Inter var experimental";
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: oblique 0deg 10deg;
+    src: url("fonts/Inter.var.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/Inter-Regular.woff2") format("woff2"),
+        url("fonts/Inter-Regular.woff") format("woff");
+}
+
+/*Our two Google hosted fonts can be used like this:
+ *
+ *font-family: 'Oswald', sans-serif;
+ *font-family: 'Noto Serif', serif;
+ *
+ * */
+
+html {
+    box-sizing: border-box;
+    /* Nicer looking fonts for OS X and iOS */
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    /*We will be adding our own margin to these elements as needed.*/
+    margin: 0;
+    /*You'll want to set font-size as needed.*/
+    font-size: 1rem;
+    /*No bold for h tags unless you want it*/
+    font-weight: 400;
+}
+
+/*SVG defaults to display: inline which I dislike. Inline-block or inline-flex will render white space on SVG elements in HTML (where you would have defs and symbols) if the container isn't a flex box or the font-size set to 0 to crush the whitespace */
+svg {
+    display: block;
+}
+
+img {
+    /*Make images behave responsively. Here they will scale up to 100% of their natural size*/
+    max-width: 100%;
+    /*Make images display as a block (UA default is usually inline)*/
+    display: block;
+}
+
+/*Set a default non-variable font but then enhance if the browser supports a variable font*/
+body {
+    font-family: Inter, sans-serif;
+    border-top: 5px solid #b50404;
+    border-bottom: 5px solid #b50404;
+    background-image: url("img/triangle_bg.png");
+}
+
+@supports (font-variation-settings: "wdth" 115) {
+    body {
+        font-family: "Inter var experimental";
+    }
+}
+
+.rwd-MastHead {
+    display: flex;
+    flex-direction: column;
+}
+
+.rwd-Logo {
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rwd-Logo_Main {
+    font-family: "Oswald", sans-serif;
+    font-size: 46px;
+}
+
+.rwd-Logo_Secondary {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.rwd-Nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    position: relative;
+    margin: 10px 0 0 0;
+}
+
+.rwd-Nav_Link {
+    margin: 0 10px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #4a4a4a;
+    /*We want these buttons to have a decent touch area so they are easy to click/tap*/
+    display: inline-flex;
+    min-height: 45px;
+    align-items: center;
+    /*Styles needed for the button only*/
+    border: 0;
+    background: none;
+}
+
+.rwd-DownloadPanel {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.rwd-DownloadPanel[aria-hidden="false"] {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+.rwd-Hero_Cover {
+    width: 150px;
+    box-shadow: 0 8px 20px -5px #000;
+    margin: 20px auto;
+}
+
+/*.rwd-Hero {*/
+/*}*/
+
+.rwd-Hero_TitleAndIntro {
+    clip-path: polygon(0 6%, 100% 0%, 100% 100%, 0 94%);
+    background-color: #262c28;
+    padding: 80px 20px 20px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.rwd-Hero_Description {
+    font-size: 12px;
+    color: #dddddd;
+    line-height: 1.8;
+    margin-top: 20px;
+    padding-top: 25px;
+    border-top: 1px solid #424242;
+}
+
+.rwd-Hero_JumpLink {
+    display: flex;
+    align-items: center;
+    min-height: 45px;
+    padding: 0 15px;
+    border-radius: 33px;
+    border: 1px solid #089df4;
+    font-size: 13px;
+    color: #fff;
+    justify-content: center;
+    max-width: 300px;
+    margin: 40px auto;
+}
+
+.rwd-Hero_Title {
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    color: #ebebeb;
+}
+
+.rwd-Hero_TextGroup {
+    position: relative;
+    display: inline-block;
+    line-height: 2;
+}
+
+.rwd-Hero_TextGroup i {
+    position: absolute;
+    left: 0;
+    bottom: calc(50% + 12px);
+    color: #86988c;
+    font-size: 12px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.rwd-Hero_Edition {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 13px;
+    top: 40px;
+    right: 20px;
+}
+
+.rwd-About {
+    padding: 20px;
+}
+
+.rwd-About_Minor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px 0 0;
+}
+
+.rwd-About_MinorTitle {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.rwd-About_Minor p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.rwd-About_MajorTitle {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.rwd-About_Major {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px 0 0;
+}
+
+.rwd-About_Major p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.rwd-About_Major a {
+    color: #b50404;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.rwd-Buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.rwd-Buy_Link {
+    border-radius: 25px;
+    padding: 5px 20px;
+    background-color: #089df4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 10px;
+}
+
+.rwd-Reviews {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem;
+    background-color: #222;
+    clip-path: polygon(0 0%, 100% 6%, 100% 94%, 0 100%);
+}
+
+.rwd-Reviews_Headline {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+}
+
+blockquote {
+    font-size: 20px;
+    margin: 0;
+}
+
+.rwd-Review {
+    color: #fff;
+    font-family: "Noto Serif", serif;
+    padding: 10px 20px;
+}
+
+.rwd-Review p {
+    margin: 10px 0 40px;
+}
+
+.rwd-New {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.rwd-New_Headline {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.rwd-New_Intro {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.rwd-New_Bullet {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.rwd-Mailing {
+    padding: 20px;
+    background-color: #262c28;
+}
+
+.rwd-Mailing_Headline {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.rwd-Mailing_Intro {
+    font-size: 12px;
+    color: #fff;
+}
+
+.rwd-Mailing_Form {
+    display: flex;
+    align-items: center;
+    border: 2px solid #b50404;
+    border-radius: 33px;
+    height: 45px;
+    background-color: #fff;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+.rwd-Mailing_Input {
+    border: 0;
+    display: flex;
+    height: 100%;
+    flex: 1 0 auto;
+}
+
+.rwd-Mailing_Subscribe {
+    outline: 0;
+    color: #b50404;
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    display: flex;
+    height: 100%;
+    border: 0;
+    align-items: center;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+.rwd-Chapters {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.rwd-Chapters_Headline {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.rwd-Chapters_List {
+    padding: 20px;
+    list-style: none;
+    counter-reset: li;
+    margin: 0;
+}
+
+.rwd-Chapter {
+    counter-increment: li;
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.rwd-Chapter::before {
+    display: inline-block;
+    text-align: right;
+    width: 30px;
+    position: absolute;
+    top: -6px;
+    left: -39px;
+    content: counter(li);
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+    color: #B50404;
+}
+
+.rwd-Chapter_Content {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.rwd-Chapter_Title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.rwd-Footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    background-color: #262C28;
+}
+
+.rwd-Footer_SectionTitle {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 20px 0 10px;
+}
+
+.rwd-Footer_Text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.rwd-Copyright {
+    color: #dcdcdc;
+    margin: 20px 0;
+    font-size: 10px;
+}
+
+.rwd-Footer_Link {
+    color: #fff;
+    text-decoration-line: underline;
+    text-decoration-skip-ink: auto;
+    font-size: 12px;
+    text-decoration-color: #aaa;
+    display: flex;
+    min-height: 40px;
+    align-items: center;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Media Query test - which browser downloads which asset?</title>
+    <meta name="description" content="Quick test to determine which browsers download all media queries" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      div {
+        display: none;
+        background-color: green;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1rem;
+        text-align: center;
+      }
+    </style>
+    <link rel="stylesheet" media="(min-width: 300px)" href="w300.css" />
+    <link rel="stylesheet" media="(min-width: 600px)" href="w600.css" />
+    <link rel="stylesheet" media="(min-width: 900px)" href="w900.css" />
+    <link rel="stylesheet" media="(min-width: 1200px)" href="w1200.css" />
+  </head>
+  <body>
+    <div class="w300">width 300px file downloaded</div>
+    <div class="w600">width 600px file downloaded</div>
+    <div class="w900">width 900px file downloaded</div>
+    <div class="w1200">width 1200px file downloaded</div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Layout example</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .Wrap {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .Header {
+        width: 100%;
+        height: 130px;
+        background-color: #038c5a;
+      }
+
+      .WrapMiddle {
+        width: 100%;
+        font-size: 0;
+      }
+
+      .Left {
+        height: 625px;
+        width: 20.83%;
+        background-color: #03a66a;
+        display: inline-block;
+      }
+
+      .Middle {
+        height: 625px;
+        width: 68.75%;
+        background-color: #bbbf90;
+        display: inline-block;
+      }
+
+      .Right {
+        height: 625px;
+        width: 10.41%;
+        background-color: #03a66a;
+        display: inline-block;
+      }
+
+      .Footer {
+        height: 200px;
+        width: 100%;
+        background-color: #025059;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Wrap">
+      <header class="Header"></header>
+      <div class="WrapMiddle">
+        <aside class="Left"></aside>
+        <main class="Middle"></main>
+        <aside class="Right"></aside>
+      </div>
+      <footer class="Footer"></footer>
+    </div>
+  </body>
+</html>

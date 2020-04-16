@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Web Design with HTML5 and CSS3 by Ben Frain</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="/" class="rwd-Logo">
+        <span class="rwd-Logo_Main">RWD</span>
+        <span class="rwd-Logo_Secondary">Education</span>
+      </a>
+      <nav class="rwd-Nav">
+        <a class="rwd-Nav_Link" href="#about">About</a>
+        <a class="rwd-Nav_Link" href="#reviews">Reviews</a>
+        <a class="rwd-Nav_Link" href="#chapters">Chapter List</a>
+        <a class="rwd-Nav_Link" href="#buy">Buy</a>
+
+        <!--Using a button because this will open a small box so the user can choose code from the second or third edition of the book. Note that a <button> needs a type of button otherwise browsers default to thinking it is a submit button. That can sometimes cause buggy behaviour.-->
+        <button type="button" class="rwd-Nav_Link">Code</button>
+        <div class="rwd-DownloadPanel">
+          <p class="rwd-DownloadPanel_Title">Download Code</p>
+          <div class="rwd-DownloadPanel_Links">
+            <a href="RWD2e_download.zip" class="rwd-DownloadPanel_Link"
+              >2nd Edition</a
+            >
+            <a href="RWD3e_download.zip" class="rwd-DownloadPanel_Link"
+              >3rd Edition</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="rwd-Hero">
+        <img
+          class="rwd-Hero_Cover"
+          src="img/rwd.png"
+          alt="Book cover of Responsive Web Design with HTML5 and CSS3 by Ben Frain"
+        />
+        <div class="rwd-Hero_TitleAndIntro">
+          <h1 class="rwd-Hero_Title">
+            Responsive Web Design
+            <span class="rwd-Hero_TextGroup">
+              <i>with</i>
+              HTML5
+            </span>
+            <span class="rwd-Hero_TextGroup">
+              <i>and</i>
+              CSS3
+            </span>
+            <span class="rwd-Hero_Edition">3rd Edition</span>
+          </h1>
+          <p class="rwd-Hero_Description">
+            Since 2012, ’Responsive Web Design with HTML5 and CSS3’ by Ben
+            Frain, has been Packt publishing’s best-selling book on Responsive
+            Web Design and the latest HTML and CSS techniques and features.  Now
+            completely updated 3rd Edition for 2020!
+          </p>
+          <a href="#new" class="rwd-Hero_JumpLink"
+            >What's new in the 3rd Edition?</a
+          >
+        </div>
+      </section>
+      <section id="about" class="rwd-About">
+        <div class="rwd-About_Minor">
+          <h5 class="rwd-About_MinorTitle">300+ Info Packed Pages</h5>
+          <p>
+            Media queries, SVG, animations, CSS tranforms, accessibiltity,
+            Flexbox, CSS Grid, CSS Scroll Snap and much, much more.
+          </p>
+        </div>
+        <div class="rwd-About_Minor">
+          <h5 class="rwd-About_MinorTitle">Sample Code</h5>
+          <p>
+            Chapter code is available for each subject and you also get the code
+            for this site. You’ll be building it bit by bit as we progress!
+          </p>
+        </div>
+        <div class="rwd-About_Minor">
+          <h5 class="rwd-About_MinorTitle">Latest Edition</h5>
+          <p>
+            The 3rd Edition of Packt’s best-selling Responsive Web Design title
+            since 2012.
+          </p>
+        </div>
+        <div class="rwd-About_Major">
+          <h5 class="rwd-About_MajorTitle">Is it for you?</h5>
+          <p>
+            This isn’t a book for absolute beginners; you should have some
+            understanding of HTML and CSS.
+          </p>
+          <p>
+            We will be taking this example site from nothing more than high
+            quality HTML markup to fully responsive progressively enhanced
+            website using the latest CSS techniques.
+          </p>
+        </div>
+        <div class="rwd-About_Major">
+          <h5 class="rwd-About_MajorTitle">What will you learn</h5>
+          <p>
+            Each chapter will teach you the essentials of that subject, before
+            putting the lessons learnt into practice to build this very site!
+          </p>
+          <p>
+            You’ll learn everything you need to build fully responsive, modern
+            web sites using the latest CSS and HTML features. Still unsure?
+          </p>
+          <a href="#chapters">Read the chapter summary below.</a>
+        </div>
+      </section>
+      <div id="buy" class="rwd-Buy">
+        <div class="rwd-Buy_Group">
+          <a
+            href="https://www.packtpub.com/web-development/responsive-web-design-html5-and-css3-second-edition"
+            class="rwd-Buy_Link rwd-Buy_Link-packt"
+          >
+            Buy from Packt
+          </a>
+        </div>
+        <div class="rwd-Buy_Group">
+          <a
+            href="https://www.amazon.com/Responsive-Web-Design-HTML5-CSS3/dp/1784398934/"
+            class="rwd-Buy_Link rwd-Buy_Link-packt"
+          >
+            Buy from Amazon
+          </a>
+        </div>
+      </div>
+      <section id="reviews" class="rwd-Reviews">
+        <h2 class="rwd-Reviews_Headline">Reviews</h2>
+        <div class="rwd-Review">
+          <blockquote>
+            Provides a ton of usable, executable advice using good examples and
+            in a very readable style.
+          </blockquote>
+          <p>– Fredric Retzko</p>
+        </div>
+        <div class="rwd-Review">
+          <blockquote>
+            ...jam packed with quality information about responsive web design,
+            but what i liked the most is that it also teaches a lot of HTML5 and
+            CSS3
+          </blockquote>
+          <p>– Mirko Zoric</p>
+        </div>
+        <div class="rwd-Review">
+          <blockquote>
+            Awesome stuff. Really recommended for anyone ready to dive into
+            HTML5/CSS3.
+          </blockquote>
+          <p>– Perovic</p>
+        </div>
+      </section>
+      <section id="new" class="rwd-New">
+        <h2 class="rwd-New_Headline">New in the 3rd Edition</h2>
+        <p class="rwd-New_Intro">
+          If you’ve only read the 1st Edition, there’s no question you’ll learn
+          plenty more from the 3rd Edition. However, if you have the 2nd
+          edition, you may be wondering if it’s worth your while. Here’s a
+          selection of the new topics covered in the 3rd Edition:
+        </p>
+        <ul class="rwd-New_Bullets">
+          <li class="rwd-New_Bullet">Full chapter on CSS Grid</li>
+          <li class="rwd-New_Bullet">CSS Scroll Snap</li>
+          <li class="rwd-New_Bullet">CSS mix-blend modes</li>
+          <li class="rwd-New_Bullet">Greater focus on accessibility</li>
+          <li class="rwd-New_Bullet">All about variable fonts</li>
+          <li class="rwd-New_Bullet">CSS font loading techniques</li>
+          <li class="rwd-New_Bullet">CSS clip-path</li>
+          <li class="rwd-New_Bullet">::focus-within for forms</li>
+          <li class="rwd-New_Bullet">CSS custom properties</li>
+          <li class="rwd-New_Bullet">
+            CSS environment variables (A.K.A. phone notches)
+          </li>
+        </ul>
+        <div class="rwd-New_Media">
+          <img
+            class="rwd-New_Img"
+            src="img/ResponsiveWebDesignA.png"
+            alt="Inside the Responsive Web Design with HTML5 and CSS3 book"
+          />
+        </div>
+      </section>
+      <section id="mailing" class="rwd-Mailing">
+        <h2 class="rwd-Mailing_Headline">Mailing List</h2>
+        <div class="rwd-Mailing_IntroAndForm">
+          <label for="mailingInput" class="rwd-Mailing_Intro">
+            Want to know when the book hits the shelves? Or perhaps advance
+            notice of special offers? Subscribe here and you’ll be first to
+            know!
+          </label>
+
+          <form class="rwd-Mailing_Form" action="/handle-form" method="post">
+            <input id="mailingInput" class="rwd-Mailing_Input" />
+            <button type="submit" class="rwd-Mailing_Subscribe">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+      <section id="chapters" class="rwd-Chapters">
+        <h2 class="rwd-Chapters_Headline">Full Chapter List</h2>
+        <ol class="rwd-Chapters_List">
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">Essentials of Responsive Design</h3>
+            <p class="rwd-Chapter_Content">
+              By the end of this first chapter, you will have made a responsive
+              web page. Along the way we will get an understanding of where
+              Responsive Web Design came from, the problems it solves and the
+              core tenants of implementing a Responsive Web Design with HTML5
+              and CSS3
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">Writing HTML markup</h3>
+            <p class="rwd-Chapter_Content">
+              Good HTML markup is the basis for any good web site or
+              application. More importantly, HTML provides a bedrock of
+              understanding for assisitve technology. In this chapter we cover
+              everything from the opening
+              <code class="rwd-Chapter_Code">&lt;!DOCTYPE html&gt;</code>
+              to the closing tag.
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">
+              Media Queries &amp; Responsive Images
+            </h3>
+            <p class="rwd-Chapter_Content">
+              Media queries provide the means to target CSS not just on screen
+              width, but screen height, color preference, screen density (DPI)
+              and a whole lot more. Besides the media query deep-dive, this
+              chapter also covers responsive images; allowing you to provide any
+              number of image permutations based upon the target device.
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">Layout with Flexbox</h3>
+            <p class="rwd-Chapter_Content">
+              Flexbox is the most widely supported modern CSS layout system.
+              Once we have covered the syntax and use cases of Flexbox, we get
+              our hands dirty with Flexbox; using it to layout the markup of
+              this very site.
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">Layout with Grid</h3>
+            <p class="rwd-Chapter_Content">
+              CSS Grid is the latest layout system. New in this edition is a
+              whole chapter dedicated to understanding the capabilities and
+              efficiencies of CSS Grid. Once we have an understanding we will
+              use our new knowledge to make improvements to our existing
+              implementation of a site design.
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">
+              CSS selectors, typography, color modes and more
+            </h3>
+            <p class="rwd-Chapter_Content">
+              This is a dense and varied chapter covering topics such as how CSS
+              selectors work, dealing with typography using @font-face and
+              variable fonts, understanding HEX, RGBA and HSLA color modes plus
+              a whole bunch of extra topics such as text-truncation,
+              multi-column layout, CSS calc and environment variables. Oh and
+              more besides. Phew!
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">
+              Create stunning aesthetics and effects with CSS
+            </h3>
+            <p class="rwd-Chapter_Content">
+              Another chapter bursting with CSS goodness. Want to know about
+              text and box shadows? What about multiple backgrounds and linear
+              and radial gradients? Repeating gradients? CSS filters like blur
+              and sepia? Masks and Clipping? Mix-blend modes? It's all in here.
+              Plus we will finish off by looking at CSS scroll-snap; the fancy
+              CSS ability to scroll elements to a specific point – no JavaScript
+              needed!
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">SVG: Scalable Vector Graphics</h3>
+            <p class="rwd-Chapter_Content">
+              SVGs are an essential part of a responsive developers toolkit. We
+              cover the most practical use-cases for SVG; how to insert SVGs
+              directly into markup, inside an object element, as a background
+              image and standard image. We also cover creating an SVG sprite
+              sheet, and how SVGs can be animated and optimisied for use on the
+              web.
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">
+              Transitions, Transformations and Animations
+            </h3>
+            <p class="rwd-Chapter_Content">
+              Transitions, transformations and animations, when used
+              judiciously, can really bring a design to life. In this chapter we
+              cover all three. Once the syntax and use-cases are covered we will
+              use them practically to create the various transitions,
+              transformations and animations on this site.
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">Forms</h3>
+            <p class="rwd-Chapter_Content">
+              This chapter covers everything you are likely to need to know
+              about forms. Topics include accessible form structure, the various
+              elements of forms, form validation and the most recent CSS that
+              allows better control of form visuals than ever before.
+            </p>
+          </li>
+          <li class="rwd-Chapter">
+            <h3 class="rwd-Chapter_Title">
+              Guidance and approaches for responsive front-end development
+            </h3>
+            <p class="rwd-Chapter_Content">
+              In the final chapter we will bring together all the knowledge
+              learned so far and consider how best to approach a responsive
+              project. We also consider some best-practice techniques to get
+              your responsive HTML and CSS based projects off to the best
+              possible start
+            </p>
+          </li>
+        </ol>
+      </section>
+      <footer class="rwd-Footer">
+        <section class="rwd-Footer_Block">
+          <h4 class="rwd-Footer_SectionTitle">
+            About
+          </h4>
+          <p class="rwd-Footer_Text">
+            This site supports the book, Responsive Web Design with HTML5 and
+            CSS3
+          </p>
+
+          <p class="rwd-Footer_Text">
+            ISBN 978-1-78439-893-4
+          </p>
+          <p class="rwd-Footer_Text">
+            Third Edition published by Packt Publishing 2020.
+          </p>
+          <small class="rwd-Copyright">
+            &copy; copyright 2019 Ben Frain. All rights reserved.
+          </small>
+        </section>
+        <section class="rwd-Footer_Block">
+          <h4 class="rwd-Footer_SectionTitle">Buy</h4>
+          <a
+            class="rwd-Footer_Link"
+            href="https://www.amazon.com/Responsive-Design-Community-Experience-Distilled/dp/1849693188/"
+          >
+            Amazon US
+          </a>
+          <a
+            class="rwd-Footer_Link"
+            href="https://www.amazon.co.uk/dp/1784398934"
+          >
+            Amazon UK
+          </a>
+          <a
+            class="rwd-Footer_Link"
+            href="https://www.packtpub.com/responsive-web-design-with-html-5-and-css3/book"
+          >
+            Packt
+          </a>
+        </section>
+        <section class="rwd-Footer_Block rwd-Footer_Block-contact">
+          <h4 class="rwd-Footer_SectionTitle">Contact</h4>
+          <a href="https://twitter.com/benfrain" class="rwd-Footer_Link">
+            @benfrain on Twitter
+          </a>
+          <a href="https://github.com/benfrain" class="rwd-Footer_Link">
+            @benfrain on GitHub
+          </a>
+          <p class="rwd-Footer_Text">Email: contact (at) benfrain dot com</p>
+        </section>
+      </footer>
+    </main>
+  </body>
+</html>

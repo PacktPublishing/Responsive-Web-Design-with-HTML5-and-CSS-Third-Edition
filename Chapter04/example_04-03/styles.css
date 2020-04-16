@@ -1,0 +1,17 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.CenterMe {
+	background-color: indigo;
+	color: #ebebeb;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	text-transform: uppercase;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

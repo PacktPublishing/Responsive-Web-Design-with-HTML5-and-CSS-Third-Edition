@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Video in HTML5</title>
+	<meta name="description" content="A basic HTML5 video link">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<video width="640" height="480" controls preload="auto" loop poster="myVideoPoster.png">
+	    <source src="myVideo.mp4" type="video/mp4">  
+	    <object width="640" height="480" type="application/x-shockwave-flash" data="myFlashVideo.SWF">
+	      <param name="movie" value="myFlashVideo.swf" />
+	      <param name="flashvars" value="controlbar=over&amp;image=myVideoPoster.jpg&amp;file=myVideo.mp4" />
+	      <img src="myVideoPoster.png" width="640" height="480" alt="__TITLE__"
+	           title="No video playback capabilities, please download the video below" />
+	    </object>
+	    <p><b>Download Video:</b>
+	  MP4 Format:  <a href="myVideo.mp4">"MP4"</a>
+	    </p>
+	</video>
+</body>
+</html>

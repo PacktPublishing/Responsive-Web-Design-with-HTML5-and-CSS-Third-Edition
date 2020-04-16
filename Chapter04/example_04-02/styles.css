@@ -1,0 +1,86 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.Wrap {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.Header {
+	width: 100%;
+	height: 130px;
+	background-color: #038C5A;
+}
+
+.WrapMiddle {
+	width: 100%;
+	font-size: 0;
+	position: relative;
+}
+
+.OffCanvas-Active .Left,
+.OffCanvas-Active .Middle {
+	transform: translate3d(200px, 0, 0);
+	transition: transform .3s;
+}
+
+.Left {
+	height: 625px;
+	background-color: #03A66A;
+	display: inline-block;
+	position: absolute;
+	left: -200px;
+	width: 200px;
+	font-size: .9rem;
+	transition: transform .3s;
+}
+
+@media (min-width: 40rem) {
+	.Left {
+		width: 20.8333333%;
+		left: 0;
+		position: relative;
+	}
+}
+
+.Middle {
+	height: 625px;
+	background-color: #bbbf90;
+	transition: transform .3s;
+	font-size: .9rem;
+}
+
+@media (min-width: 40rem) {
+	.Middle {
+		display: inline-block;
+		width: 68.75%;
+	}
+}
+
+.Right {
+	height: 625px;
+	width: 100%;
+	background-color: #03A66A;
+	font-size: .9rem;
+}
+
+@media (min-width: 40rem) {
+	.Right {
+		width: 10.4166667%;
+		display: inline-block;
+	}
+}
+
+.Footer {
+	height: 200px;
+	width: 100%;
+	background-color: #025059;
+}
