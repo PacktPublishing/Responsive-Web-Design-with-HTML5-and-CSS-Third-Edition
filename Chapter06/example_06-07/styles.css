@@ -1,0 +1,11 @@
+div {
+	display: inline-block;
+	height: 2rem;
+	width: 2rem;
+	background-color: blue;
+}
+
+.a-div:not(.not-me) {
+	background-color: #f90;
+	border-radius: 50%;
+}

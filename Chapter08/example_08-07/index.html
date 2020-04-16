@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>An example from http://rwd.education</title>
+	<meta name="description" content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain">
+	<meta name="viewport" content="width=device-width">
+	<meta name="theme-color" content="#ff9900">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="wrapper">
+		<svg width="198" height="188" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<title>Star 1</title>
+			<defs>
+				<style type="text/css">
+					<![CDATA[
+					@-webkit-keyframes spin {
+						0% {
+							-webkit-transform: rotate(0deg);
+							transform: rotate(0deg);
+						}
+						100% {
+							-webkit-transform: rotate(360deg);
+							transform: rotate(360deg);
+						}
+					}
+					@keyframes spin {
+						0% {
+							-webkit-transform: rotate(0deg);
+							transform: rotate(0deg);
+						}
+						100% {
+							-webkit-transform: rotate(360deg);
+							transform: rotate(360deg);
+						}
+					}
+					.star_Wrapper {
+						-webkit-animation: spin 2s 1s;
+						animation: spin 2s 1s;
+						-webkit-transform-origin: 50% 50%;
+						transform-origin: 50% 50%;
+					}
+					.wrapper {
+						padding: 2rem;
+						margin: 2rem;
+					}
+					]]>
+				</style>
+				<g id="shape">
+					<path fill="#14805e" d="M50 50h50v50H50z"/>
+					<circle fill="#ebebeb" cx="50" cy="50" r="50"/>
+				</g>
+			</defs>
+			<g class="star_Wrapper" fill="none" fill-rule="evenodd">
+				<path id="star_Path" stroke="#333" stroke-width="3" fill="#F8E81C" d="M99 154l-58.78 30.902 11.227-65.45L3.894 73.097l65.717-9.55L99 4l29.39 59.55 65.716 9.548-47.553 46.353 11.226 65.453z"/>
+			</g>
+		</svg>
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.star_Wrapper path {
+	stroke-width: 6px;
+}
+
+.has-StarBg {
+	background-image: url('Star.svg');
+	background-size: cover;
+	width: 198px;
+	height: 188px;
+}

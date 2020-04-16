@@ -1,0 +1,58 @@
+.my-first-grid {
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: [left-start] 200px [left-end center-start] 200px [center-end right-start] 200px [right-end];
+  grid-template-rows: [top-start] 200px [top-end middle-start] 200px [middle-end bottom-start] 200px [bottom-end];
+  background-color: #e4e4e4;
+}
+
+[class^='grid-item'] {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  outline: 3px dashed #f90;
+  font-size: 30px;
+  color: #333;
+}
+
+.grid-item-1 {
+  grid-area: middle / center;
+}
+
+.grid-item-2 {
+  grid-area: bottom / right;
+}
+
+.grid-item-3 {
+  grid-area: top / left;
+}
+
+.grid-item-4 {
+  grid-column: right-start / right-end;
+  grid-row: top-start / top-end;
+}
+
+.grid-items-5 {
+  grid-column: left-start / middle-start;
+  grid-row: middle-end / bottom-end;
+}
+
+.grid-item-6 {
+  grid-column: right-start / right-end;
+  grid-row: middle-start / middle-end;
+}
+
+.grid-item-7 {
+  grid-column: center-start / center-end;
+  grid-row: middle-end / bottom-end;
+}
+
+.grid-item-8 {
+  grid-column: left-start / left-end;
+  grid-row: top-end / bottom-start;
+}
+
+.grid-item-9 {
+  grid-column: center-start / center-end;
+  grid-row: top-start / top-end;
+}

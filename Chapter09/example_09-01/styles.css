@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	display: flex;
+	min-height: 44px;
+}
+
+a {
+	font-family: sans-serif;
+	color: #fff;
+	text-indent: 1rem;
+	background-color: #ccc;
+	display: inline-flex;
+	flex: 1 1 20%;
+	align-self: stretch;
+	align-items: center;
+	transition: box-shadow 1s;
+	text-decoration: none;
+}
+
+a + a {
+    border-left: 1px solid #aaa;
+}
+
+a:hover {
+	box-shadow: inset 0 -3px 0 #CC3232;
+}

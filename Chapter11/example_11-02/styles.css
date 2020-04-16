@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0rem;
+  font-family: sans-serif;
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+h1 {
+  padding: 0 1rem;
+}
+
+.Scroll_Wrapper {
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /*Remove the scrollbars in supporting versions of older IE*/
+  -ms-overflow-style: none;
+  /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
+  /* Make a counter */
+  counter-reset: count-the-films;
+}
+
+/*Stops the scrollbar appearing in Safari, Chrome and MS Edge browsers*/
+.Scroll_Wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.Item {
+  display: inline-flex;
+  flex-direction: column;
+  white-space: normal;
+  counter-increment: count-the-films;
+  position: relative;
+  margin: 15px 20px;
+}
+
+.Item::before {
+  content: counter(count-the-films);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1rem;
+  top: -15px;
+  left: -0.7rem;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: #111;
+  background-color: #f0f0f0;
+}
+
+.Item img {
+  max-height: 7.25rem;
+  border: 1px solid #8c8c8c;
+}
+
+.Caption {
+  margin-top: 10px;
+  max-width: 4rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.ScrollBtn {
+  margin: 20px 0 0 20px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff;
+  min-height: 35px;
+  border: 1px solid #888;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.ScrollBtn:hover {
+  background-color: #222;
+}
+
+@supports (display: grid) {
+  .Scroll_Wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    /*You need this next declaration to prevent the grid expaning when the viewport is wider*/
+    max-width: min-content;
+    grid-template-rows: auto;
+  }
+}
+
+@supports (scroll-snap-type: x mandatory) {
+  .Scroll_Wrapper {
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 20px;
+  }
+  .Item {
+    scroll-snap-align: start;
+  }
+}
+
+@supports (scroll-behavior: smooth) {
+  .Scroll_Wrapper {
+    scroll-behavior: smooth;
+  }
+}

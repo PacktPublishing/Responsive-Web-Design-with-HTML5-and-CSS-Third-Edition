@@ -1,0 +1,6 @@
+.radial-gradient {
+	margin: 1rem;  
+	width: 400px;
+	height: 200px;
+	background: radial-gradient(12rem circle at bottom,  yellow, orange, red);
+}

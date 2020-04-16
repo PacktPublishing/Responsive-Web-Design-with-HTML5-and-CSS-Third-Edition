@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>An example from http://rwd.education</title>
+	<meta name="description" content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain">
+	<meta name="viewport" content="width=device-width">
+	<meta name="theme-color" content="#ff9900">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="controls">
+		<label>Adjust Width
+			<input class="range" type="range" min="1" max="10"/>
+		</label>
+		<br />
+		<label>Enter value
+			<input class="enterValue" type="number" min="0" max="100" required placeholder="enter value" value="50"/>
+		</label>
+		<button class="animate">Animate!!</button>
+	</div>
+	<div class="anim_Wrapper">
+		<svg width="228px" height="228px" viewBox="0 0 228 228" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g id="circle" class="circle" stroke="#ff9900" stroke-width="20" fill="none" fill-rule="evenodd">
+				<path d="M227.5,114 C227.5,51.3156809 176.684319,0.5 114,0.5 C51.3156809,0.5 0.5,51.3156809 0.5,114 C0.5,176.684319 51.3156809,227.5 114,227.5 C176.684319,227.5 227.5,176.684319 227.5,114 Z" id="Oval-1" stroke="#14803f"></path>
+				<text class="text" x="114" y="114" text-anchor="middle" id="100%" stroke-width="1" font-family="Helvetica" font-size="48" font-weight="bold" fill="#BBBBBB" dominant-baseline="middle" alignment-baseline="central" text-anchor="middle"></text>
+			</g>
+		</svg>
+		
+	</div>
+	<script src="greensock/TweenMax.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

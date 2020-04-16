@@ -1,0 +1,4 @@
+.HRH {
+	-webkit-filter: url('filter.svg#myfilter');
+	        filter: url('filter.svg#myfilter');
+}

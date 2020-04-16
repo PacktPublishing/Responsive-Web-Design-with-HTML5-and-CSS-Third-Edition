@@ -1,0 +1,72 @@
+.tri-right {
+	width: 0;
+	height: 0;
+	border-top: 3.125rem solid transparent;
+	border-left: 6.25rem solid red;
+	border-bottom: 3.125rem solid transparent;
+	margin-bottom: 5rem;
+	/*box-shadow: 8px 8px 6px #333;*/
+	-webkit-filter: drop-shadow(8px 8px 6px #333);
+	        filter: drop-shadow(8px 8px 6px #333);
+
+}
+
+[class^="filter"] {
+	background-image: url('el-cap@1x.jpg');
+	-webkit-background-size: cover;
+	        background-size: cover;
+	width: 750px;
+	height: 500px;
+	margin-bottom: 5rem;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+	[class^="filter"] {
+		background-image: url('el-cap@2x.jpg');
+	}
+}
+
+.filter-blur {
+	-webkit-filter: blur(2px);
+	        filter: blur(2px);
+}
+
+.filter-brightness {
+	-webkit-filter: brightness(2);
+	        filter: brightness(2);
+}
+
+.filter-contrast {
+	-webkit-filter: contrast(2);
+	        filter: contrast(2);
+}
+
+.filter-grayscale {
+	-webkit-filter: grayscale(.8);
+	        filter: grayscale(.8);
+}
+
+.filter-hue-rotate {
+	-webkit-filter: hue-rotate(25deg);
+	        filter: hue-rotate(25deg);
+}
+
+.filter-invert {
+	-webkit-filter: invert(75%);
+	        filter: invert(75%);
+}
+
+.filter-opacity {
+	-webkit-filter: opacity(50%);
+	        filter: opacity(50%);
+}
+
+.filter-saturate {
+	-webkit-filter: saturate(15%);
+	        filter: saturate(15%);
+}
+
+.filter-sepia {
+	-webkit-filter: sepia(.75);
+	        filter: sepia(.75);
+}

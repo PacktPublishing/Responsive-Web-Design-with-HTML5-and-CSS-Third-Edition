@@ -1,0 +1,56 @@
+.my-first-grid {
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  background-color: #e4e4e4;
+  grid-template-areas:
+    'one two three'
+    'four five six'
+    'seven eight nine';
+}
+
+[class^='grid-item'] {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  outline: 3px dashed #f90;
+  font-size: 30px;
+  color: #333;
+}
+
+.grid-item-1 {
+  grid-area: five;
+}
+
+.grid-item-2 {
+  grid-area: nine;
+}
+
+.grid-item-3 {
+  grid-area: one;
+}
+
+.grid-item-4 {
+  grid-area: three;
+}
+
+.grid-items-5 {
+  grid-area: seven;
+}
+
+.grid-item-6 {
+  grid-area: six;
+}
+
+.grid-item-7 {
+  grid-area: eight;
+}
+
+.grid-item-8 {
+  grid-area: four;
+}
+
+.grid-item-9 {
+  grid-area: two;
+}

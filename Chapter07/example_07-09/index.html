@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>clip-path examples</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta
+      name="description"
+      content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain"
+    />
+  </head>
+  <body>
+    <svg height="0" width="0">
+      <defs>
+        <clipPath id="starSymbol">
+          <path
+            d="M191 300L73.443 361.803l22.451-130.901L.79 138.197l131.432-19.099L191 0l58.779 119.098 131.432 19.099-95.105 92.705 22.451 130.901z"
+            fill="#fff"
+          ></path>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <div class="clip-circle"></div>
+    <div class="clip-ellipse"></div>
+    <div class="clip-inset"></div>
+    <div class="clip-polygon"></div>
+    <div class="clip-url"></div>
+  </body>
+</html>

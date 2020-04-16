@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>An example from http://rwd.education</title>
+	<meta name="description" content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain">
+	<meta name="viewport" content="width=device-width">
+	<meta name="theme-color" content="#ff9900">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<table class="t-SVG">
+		<tr>
+			<th class="t-Item">Feature</th>
+			<th class="t-Item">img</th>
+			<th class="t-Item">object</th>
+			<th class="t-Item">inline</th>
+			<th class="t-Item">bg image</th>
+		</tr>
+		<tr>
+			<td class="t-Item">SMIL</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+		</tr>
+		<tr>
+			<td class="t-Item">External CSS</td>
+			<td class="t-Item t-Red">N</td>
+			<td class="t-Item t-Amber">*<sup>1</sup></td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Red">N</td>
+		</tr>
+		<tr>
+			<td class="t-Item">Internal CSS</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+		</tr>
+		<tr>
+			<td class="t-Item">Access via JS</td>
+			<td class="t-Item t-Red">N</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Red">N</td>
+		</tr>
+		<tr>
+			<td class="t-Item">Cacheable</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Amber">*<sup>2</sup></td>
+			<td class="t-Item t-Green">Y</td>
+		</tr>
+		<tr>
+			<td class="t-Item">MQ in SVG</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Amber">*<sup>3</sup></td>
+			<td class="t-Item t-Green">Y</td>
+		</tr>
+		<tr>
+			<td class="t-Item">Use possible</td>
+			<td class="t-Item t-Red">N</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Green">Y</td>
+			<td class="t-Item t-Red">N</td>
+		</tr>
+	</table>
+
+	<p>Notes:</p>
+	<ol>
+		<li>You can use an external stylesheet but you have to link to it from within the SVG</li>
+		<li>You can link to an external SVG (which is cacheable) and a fragment within but it doesn't work in IE by default</li>
+		<li>The media query in an inlined SVG works on the size of the document it lives in (not the size of the SVG itself)</li>
+	</ol>
+</body>
+</html>

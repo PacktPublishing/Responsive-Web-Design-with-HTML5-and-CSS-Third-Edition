@@ -1,0 +1,15 @@
+main {
+	-webkit-column-gap: 2em;
+	   -moz-column-gap: 2em;
+	        column-gap: 2em;
+	-webkit-column-rule: thin dotted #999;
+	   -moz-column-rule: thin dotted #999;
+	        column-rule: thin dotted #999;
+	-webkit-column-width: 12em;
+	   -moz-column-width: 12em;
+	        column-width: 12em;
+}
+
+p {
+	margin: 0;
+}
