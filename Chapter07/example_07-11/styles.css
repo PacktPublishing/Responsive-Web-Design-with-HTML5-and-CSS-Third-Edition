@@ -1,0 +1,26 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111;
+}
+.mask-image-example {
+  display: block;
+  height: 1024px;
+  width: 1024px;
+  margin: 0 auto;
+  mask-image: url('mars-text-mask.png');
+  animation: moveMask 6s infinite alternate;
+}
+
+@keyframes moveMask {
+  0% {
+    object-position: 0px 0px;
+  }
+  100% {
+    object-position: 100px 100px;
+  }
+}

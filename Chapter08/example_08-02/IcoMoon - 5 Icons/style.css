@@ -1,0 +1,67 @@
+.icon {
+	display: inline-block;
+	color: #444444;
+	fill: currentColor;
+}
+.icon-drag-left-right {
+	width: 42px;
+	height: 32px;
+}
+#icon-drag-left-right .path1 {
+	fill: currentcolor;
+}
+#icon-drag-left-right .path2 {
+	fill: currentcolor;
+}
+#icon-drag-left-right .path3 {
+	fill: currentcolor;
+}
+.icon-drag-left {
+	width: 42px;
+	height: 32px;
+}
+#icon-drag-left .path1 {
+	fill: currentcolor;
+}
+#icon-drag-left .path2 {
+	fill: currentcolor;
+}
+#icon-drag-left .path3 {
+	fill: currentcolor;
+}
+.icon-drag-right {
+	width: 42px;
+	height: 32px;
+}
+#icon-drag-right .path1 {
+	fill: currentcolor;
+}
+#icon-drag-right .path2 {
+	fill: currentcolor;
+}
+#icon-drag-right .path3 {
+	fill: currentcolor;
+}
+.icon-touch {
+	width: 32px;
+	height: 32px;
+}
+#icon-touch .path1 {
+	fill: currentcolor;
+}
+#icon-touch .path2 {
+	fill: currentcolor;
+}
+.icon-multitouch {
+	width: 32px;
+	height: 32px;
+}
+#icon-multitouch .path1 {
+	fill: currentcolor;
+}
+#icon-multitouch .path2 {
+	fill: currentcolor;
+}
+#icon-multitouch .path3 {
+	fill: currentcolor;
+}

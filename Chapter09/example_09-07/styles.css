@@ -1,0 +1,121 @@
+/*Make everything use border-box sizing for simplicity*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main-content {
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 2em;
+}
+
+/*remove default button styling*/
+.off-canvas-launcher {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #297d94;
+  border-radius: 4px;
+  background: none;
+  padding: 4px 8px;
+  position: relative;
+}
+
+/*if we don't have JavaScript available, no point showing the button*/
+.no-js .off-canvas-launcher {
+  display: none;
+}
+
+/*add some interactivity when the button is clicked*/
+.off-canvas-launcher:active {
+  top: 1px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  color: #ddd;
+  min-height: 44px;
+  text-decoration: none;
+  transition: border 0.35s, background-color 0.35s;
+}
+
+/*when a link follows another, give it a border-top*/
+.nav-link + .nav-link {
+  border-top: 1px solid #aaa;
+}
+
+.nav-link:hover {
+  background-color: #236b7f;
+  color: #fff;
+}
+
+/*add a transition for the left and transform properties and a duration for transitions*/
+.navigation-menu {
+  background-color: #297d94;
+  transition: left, transform 0.4s;
+}
+
+/*for smaller screens that support JavaScript by default hide the nav off screen*/
+@media (min-width: 200px) {
+  .js .navigation-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    left: -200px;
+  }
+  /*when the menu button is clicked move the nav back on screen*/
+  .js .OffCanvas-Active .navigation-menu {
+    left: 0;
+  }
+  /*if the browser supports transforms, reset the left property and pull it off screen with a translate */
+  @supports (transform: translateX(-200px)) {
+    .js .navigation-menu {
+      left: auto;
+      transform: translateX(-200px);
+    }
+    /*when transforms are supported and the menu button is clicked, reset the nav to default position*/
+    .js .OffCanvas-Active .navigation-menu {
+      transform: translateX(0);
+    }
+  }
+  @supports (transform: translate3d(-200px, 0, 0)) {
+    /*where transform3d is supported reset left and pull off screen with a translate3d instead*/
+    .js .navigation-menu {
+      left: auto;
+      transform: translate3d(-200px, 0, 0);
+    }
+    /*when transform3d is supported and the menu button is clicked, reset the nav to default position*/
+    .js .OffCanvas-Active .navigation-menu {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+/*for larger screens set the nav to the left and give the main content extra margin to compensate for it*/
+@media (min-width: 800px) {
+  .navigation-menu {
+    left: 0 !important;
+    transform: none !important;
+  }
+  .off-canvas-launcher {
+    display: none;
+  }
+  .main-content {
+    position: relative;
+    margin-left: 200px;
+  }
+  .no-js .main-content {
+    margin-left: 0;
+  }
+}

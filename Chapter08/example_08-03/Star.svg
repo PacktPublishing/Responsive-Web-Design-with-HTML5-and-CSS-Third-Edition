@@ -1,0 +1,27 @@
+<?xml-stylesheet href="styles.css" type="text/css"?>
+<svg width="198" height="188" viewBox="0 0 198 188" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Star 1</title>
+	<defs>
+		<style type="text/css">
+			<![CDATA[
+				#star_Path {
+					stroke: red;
+				}
+				@media (min-width: 80px) {
+					#star_Path {
+						stroke: violet;
+					}
+				}
+			]]>
+		</style>
+		<g id="shape">
+			<rect fill="#14805e" x="50" y="50" width="50" height="50" />
+			<circle fill="#ebebeb" cx="50" cy="50" r="50" />
+		</g>
+	</defs>
+	<g class="star_Wrapper" fill="none" fill-rule="evenodd">
+		<animate xlink:href="#star_Path" attributeName="fill" attributeType="XML" begin="0s" dur="2s" fill="freeze" from="#F8E81C" to="#14805e" />
+
+		<path id="star_Path" stroke="#979797" stroke-width="3" fill="#F8E81C" d="M99 154l-58.78 30.902 11.227-65.45L3.894 73.097l65.717-9.55L99 4l29.39 59.55 65.716 9.548-47.553 46.353 11.226 65.452z" />
+	</g>
+</svg>

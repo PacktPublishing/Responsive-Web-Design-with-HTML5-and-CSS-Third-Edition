@@ -1,0 +1,17 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.bg-multi {
+	height: 100vh;
+	width: 100vw;
+	background:
+		url('rosetta.png'), 
+		url('moon.png'),
+		url('stars.jpg');
+	background-size: 75vmax, 50vw, cover;
+	background-position: top 50px right 80px, 40px 40px, top center;
+	background-repeat: no-repeat;
+}

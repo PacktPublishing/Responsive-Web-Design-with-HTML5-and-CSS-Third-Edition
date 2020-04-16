@@ -1,0 +1,29 @@
+:root {
+  --MainFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Inter-V';
+  src: url('fonts/inter.var.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-display: fallback;
+  font-style: oblique 0deg 10deg;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: all 0.35s;
+  font-size: 1.2em;
+  font-family: 'sans-serif';
+  font-family: var(--MainFont);
+  font-weight: 400;
+}
+
+@supports (font-variation-settings: 'wdth' 200) {
+  body {
+    font-family: 'Inter-V';
+    font-variation-settings: 'wght' 300, 'slnt' -4;
+    font-feature-settings: 'cv08', 'cv05';
+  }
+}

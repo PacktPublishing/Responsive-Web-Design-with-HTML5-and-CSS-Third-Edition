@@ -1,0 +1,19 @@
+.no-spread,
+.spread {
+	height: 20vmin;
+	width: 20vmin;
+	border: 1px solid #111;
+	margin: 1em;
+	display: inline-flex;
+	font-family: sans-serif;
+	align-items: center;
+	justify-content: center;
+}
+
+.no-spread {
+  box-shadow: 0 10px 10px;
+}
+
+.spread {
+  box-shadow: 0 10px 10px -10px;
+}

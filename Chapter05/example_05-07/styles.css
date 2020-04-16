@@ -1,0 +1,16 @@
+.my-first-grid {
+  display: grid;
+  background-color: #e4e4e4;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+[class^='grid-item'] {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  outline: 3px dashed #f90;
+  height: 100px;
+  font-size: 30px;
+  color: #333;
+}

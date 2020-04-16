@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>An example from http://rwd.education</title>
+    <meta
+      name="description"
+      content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff9900" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form class="form-Wrapper" id="redemption" method="post">
+      <div class="form-Intro">
+        <h1>Oscar Redemption</h1>
+        <h2>
+          Here's your chance to set the record straight: tell us what year the
+          wrong film got nominated, and which film <b>should</b> have received a
+          nod...
+        </h2>
+      </div>
+      <fieldset class="form-About_Wrapper">
+        <legend>About the offending film <span>(part 1 of 3)</span></legend>
+        <div class="form-Input_Wrapper">
+          <input
+            id="film"
+            name="film"
+            type="text"
+            placeholder="e.g. King Kong"
+            required
+          />
+          <label for="film">The film in question?</label>
+        </div>
+        <div class="form-Input_Wrapper">
+          <input
+            id="yearOfCrime"
+            name="yearOfCrime"
+            type="number"
+            min="1929"
+            max="2015"
+            required
+          />
+          <label for="yearOfCrime">Year Of Crime</label>
+        </div>
+        <div class="form-Input_Wrapper">
+          <input
+            id="awardWon"
+            name="awardWon"
+            type="text"
+            list="awards"
+            placeholder="e.g. Best Picture"
+          />
+          <datalist id="awards">
+            <select>
+              <option label="Best Picture" value="Best Picture"></option>
+              <option label="Best Director" value="Best Director"></option>
+              <option
+                label="Best Adapted Screenplay"
+                value="Best Adapted Screenplay"
+              ></option>
+              <option
+                label="Best Original Screenplay"
+                value="Best Original Screenplay"
+              ></option>
+            </select>
+          </datalist>
+          <label for="awardWon">Award Won</label>
+        </div>
+        <div class="form-Input_Wrapper">
+          <textarea
+            id="whyItsWrong"
+            name="whyItsWrong"
+            placeholder="I fell asleep within 20 minutes..."
+            required
+          ></textarea>
+          <label for="whyItsWrong">Tell us why that's wrong?</label>
+        </div>
+        <div class="form-Input_Wrapper">
+          <span class="form-Slider_Wrapper">
+            <input
+              id="howYouRateIt"
+              name="howYouRateIt"
+              type="range"
+              min="1"
+              max="10"
+              value="5"
+              onchange="showValue(this.value)"
+            />
+            <span id="range">5</span>
+          </span>
+          <label for="howYouRateIt"
+            >How you rate it (1 is woeful, 10 is great)</label
+          >
+        </div>
+        <script>
+          function showValue(newValue) {
+            document.getElementById('range').innerHTML = newValue;
+          }
+        </script>
+      </fieldset>
+
+      <fieldset class="form-What_Wrapper">
+        <legend>What should have won? <span>(part 2 of 3)</span></legend>
+
+        <div class="form-Input_Wrapper">
+          <input
+            id="filmGood"
+            name="filmGood"
+            type="text"
+            placeholder="e.g. Cable Guy"
+            required
+          />
+          <label for="filmGood">The film that should have won?</label>
+        </div>
+
+        <div class="form-Input_Wrapper">
+          <textarea
+            id="whyItShould"
+            name="whyItShould"
+            placeholder="Hello? CAABBLLLLE GUUUY!!!!!"
+            required
+          ></textarea>
+          <label for="whyItShould">Tell us why it should have won?</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-You_Wrapper">
+        <legend>About you? <span>(part 3 of 3)</span></legend>
+
+        <div class="form-Input_Wrapper">
+          <input
+            id="name"
+            name="name"
+            pattern="([a-zA-Z]{3,30}\s*)+[a-zA-Z]{3,30}"
+            placeholder="Dwight Schultz"
+            required
+          />
+          <label for="name">Your Name</label>
+        </div>
+        <div class="form-Input_Wrapper">
+          <input id="color" name="color" type="color" />
+          <label for="color">Your favorite color</label>
+        </div>
+        <div class="form-Input_Wrapper">
+          <input id="date" class="pickDate" type="date" name="date" />
+          <label for="date">Date/Time</label>
+        </div>
+        <div class="form-Input_Wrapper">
+          <input
+            id="tel"
+            name="tel"
+            type="tel"
+            placeholder="1-234-546758"
+            autocomplete="off"
+            required
+          />
+          <label for="tel"
+            >Telephone (so we can berate you if you're wrong)</label
+          >
+        </div>
+        <div class="form-Input_Wrapper">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="dwight.schultz@gmail.com"
+            required
+          />
+          <label for="email">Your Email address</label>
+        </div>
+        <div class="form-Input_Wrapper">
+          <input id="web" name="web" type="url" placeholder="www.mysite.com" />
+          <label for="web">Your Web address</label>
+        </div>
+      </fieldset>
+      <button class="form-Submit_Btn" type="submit" value="Submit Redemption">
+        <span class="flipper">
+          <span class="flipper-object flipper-vertical">
+            <span class="panel front">Ready?</span>
+            <span class="panel back">Submit</span>
+          </span>
+        </span>
+      </button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+body {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.shape * {
+  transition: all 1s;
+}
+
+.shape {
+  display: block;
+  --stroke1: #ddd;
+  --fill1: #444;
+  --stroke2: #f90;
+  --fill2: #663d00;
+}
+
+.shape:hover {
+  --stroke1: #333;
+  --fill1: #444;
+  --stroke2: #fff;
+  --fill2: #ffc266;
+}
+
+.amended .shape {
+  --stroke1: #080b2b;
+  --fill1: #141a67;
+  --fill2: #192183;
+  --stroke2: #2d3ad7;
+}
+
+.amended .shape:hover {
+  --stroke1: #092b08;
+  --fill1: #125610;
+  --fill2: #2dd728;
+  --stroke2: #1b8118;
+}
+
+button {
+  margin: 20px;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 0 20px;
+}

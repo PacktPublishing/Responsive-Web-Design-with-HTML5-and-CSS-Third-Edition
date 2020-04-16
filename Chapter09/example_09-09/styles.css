@@ -1,0 +1,33 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #555;
+}
+
+.margin,
+.transform {
+  color: #222;
+  display: inline-block;
+  transition: margin 1s, transform 1s;
+}
+
+.margin:hover {
+  margin-left: 10px;
+}
+
+.transform:hover {
+  transform: translateX(10px);
+}

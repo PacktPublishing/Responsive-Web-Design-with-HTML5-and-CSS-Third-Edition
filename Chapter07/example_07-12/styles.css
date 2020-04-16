@@ -1,0 +1,22 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('mars.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.over-text {
+  font-size: 25px;
+  line-height: 1.4;
+  color: #fff;
+  mix-blend-mode: overlay;
+  max-width: 30em;
+  margin: 9em 5em;
+}

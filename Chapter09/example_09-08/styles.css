@@ -1,0 +1,19 @@
+.background-change {
+	animation: fillBg 3s;
+	height: 200px;
+	width: 400px;
+	border: 1px solid #ccc;
+}
+
+@keyframes fillBg {
+	0% {
+		background-color: yellow;
+	}
+	100% {
+		background-color: red;
+	}
+}
+
+.fill-mode-forwards {
+	animation-fill-mode: forwards;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Re-coloring SVG with CSS Custom Properties</title>
+    <meta
+      name="description"
+      content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg
+      class="shape"
+      width="268"
+      height="254"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>Colouring Test</title>
+      <g fill="none" fill-rule="evenodd" stroke-width="10">
+        <path
+          d="M134 6.18L6.73 98.647l48.613 149.615h157.314L261.27 98.647 134 6.18z"
+          stroke="var(--stroke1)"
+          fill="var(--fill1)"
+        />
+        <path
+          d="M134 36.18l-98.738 71.738 37.714 116.074h122.048l37.714-116.074L134 36.18z"
+          stroke="var(--stroke2)"
+          fill="var(--fill2)"
+        />
+      </g>
+    </svg>
+
+    <button>Amend Colour</button>
+
+    <script>
+      const btn = document.querySelector('button');
+      const root = document.documentElement;
+      btn.addEventListener('click', e => {
+        root.classList.toggle('amended');
+      });
+    </script>
+  </body>
+</html>

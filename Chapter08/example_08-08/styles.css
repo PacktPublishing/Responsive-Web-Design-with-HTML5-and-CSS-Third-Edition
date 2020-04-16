@@ -1,0 +1,68 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #000;
+	display: flex;
+	align-items: center;
+}
+
+.anim_Wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+}
+
+
+svg {
+	padding: 20px;
+}
+
+svg path {
+	stroke: #14803f;
+	stroke-width: 10px;
+	// stroke-linecap: round;
+}
+
+svg text {
+	stroke: none;
+	fill: #fff;
+}
+
+.controls {
+	padding: 2rem;
+	background-color: #444;
+	border-radius: 4px;
+	font-size: .8rem;
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+
+input {
+	font-size: 1.2rem;
+	line-height: 1.2;
+	border-radius: 4px;
+	margin: .2rem 0 0 auto;
+}
+
+.animate {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 4px;
+	background-color: #c7c7c7;
+	min-height: 1.5rem;
+	display: flex;
+	flex: 1 1 100%;
+	width: 100%;
+	justify-content: center;
+	margin-top: 1rem;
+}

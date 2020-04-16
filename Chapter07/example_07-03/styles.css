@@ -1,0 +1,6 @@
+.linear-gradient {
+	margin: 1rem;  
+	width: 400px;
+	height: 200px;
+	background: linear-gradient(#f90 0, #f90 2%, #555 2%, #eee 50%, #555 98%, #f90 98%, #f90 100%);
+}

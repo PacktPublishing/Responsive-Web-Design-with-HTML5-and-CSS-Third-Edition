@@ -1,0 +1,12 @@
+.thing {
+	padding: 1rem;
+	background-color: violet;
+}
+
+/**
+ * Hide the element if it is empty:;
+ */
+
+/*.thing:empty {
+	display: none;
+}*/

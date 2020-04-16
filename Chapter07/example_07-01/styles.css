@@ -1,0 +1,19 @@
+.box-shadow,
+.inner-box-shadow {
+	height: 20vmin;
+	width: 20vmin;
+	border: 1px solid #111;
+	margin: 1em;
+	display: inline-flex;
+	font-family: sans-serif;
+	align-items: center;
+	justify-content: center;
+}
+
+.box-shadow {
+	box-shadow: 0 0 15px blue;
+}
+
+.inner-box-shadow {
+	box-shadow: inset 0 0 15px violet;
+}

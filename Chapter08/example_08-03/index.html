@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>An example from http://rwd.education</title>
+	<meta name="description" content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain">
+	<meta name="viewport" content="width=device-width">
+	<meta name="theme-color" content="#ff9900">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Testing the capabilities possible with SVG inserted into the document in different ways</h1>
+	<div>
+		<h3>As an image:</h3>
+		<img id="svgImg" src="Star.svg" alt="Star SVG" />
+	</div>
+	<div>
+		<h3>Inside an object tag:</h3>
+		<object id="svgObject" data="Star.svg" type="image/svg+xml">
+			Your browser doesn't support SVG
+		</object>
+	</div>
+	<div>
+		<h3>Inserted 'inline':</h3>
+		<span class="inlineSVG">
+			<svg id="svgInline" width="198" height="188" viewBox="0 0 198 188" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<title>Star 1</title>
+				<defs>
+					<style type="text/css"><![CDATA[
+						.#star_Path {
+							stroke: red;
+						}
+						@media (min-width: 800px) {
+							#star_Path {
+								stroke: violet;
+							}
+						}
+						]]></style>
+						<g id="shapeInline">
+							<rect fill="#14805e" x="50" y="50" width="50" height="50" />
+							<circle fill="#ebebeb" cx="50" cy="50" r="50" />
+						</g>
+					</defs>
+					<g class="star_Wrapper" fill="none" fill-rule="evenodd">
+						<animate xlink:href="#star_Path" attributeName="fill" attributeType="XML"
+						begin="0s" dur="2s" fill="freeze" from="#F8E81C" to="#14805e" />
+
+						<path id="star_Path" stroke="#979797" stroke-width="3" fill="#F8E81C" d="M99 154l-58.78 30.902 11.227-65.45L3.894 73.097l65.717-9.55L99 4l29.39 59.55 65.716 9.548-47.553 46.353 11.226 65.452z" />
+					</g>
+				</svg>
+			</span>
+		</div>
+		<div>
+			<h3>Inserted via CSS as background image:</h3>
+			<div class="has-StarBg"></div>
+		</div>
+		What about &lt;use&gt; ? 
+
+		<svg>
+			<use xlink:href="#shapeInline" x="50" y="50" />
+			<use xlink:href="Star.svg#shape" x="200" y="50" />
+		</svg>
+		<script>
+
+			document.addEventListener("DOMContentLoaded", function(event) { 
+				var imgStarPath = document.querySelector('#svgImg .star_Wrapper');
+				console.log("Is SVG in an img tag accessibe? " + imgStarPath);
+
+				var inlineStarPath = document.querySelector('#svgInline');
+				console.log("Is inlineSVG accessible? " + inlineStarPath);
+
+				var objectWrapper = document.querySelector('#svgObject');
+				objectWrapper.onload = function() {
+					var svgInObject = objectWrapper.contentDocument;
+					console.log("Is SVG in object accessible? " + svgInObject);
+				};
+
+				var bgStarPath = document.querySelector('.has-StarBg .star_Wrapper');
+				console.log("Is SVG in BG image accessible? " + bgStarPath);
+			});			
+		</script>
+	</body>
+	</html>
