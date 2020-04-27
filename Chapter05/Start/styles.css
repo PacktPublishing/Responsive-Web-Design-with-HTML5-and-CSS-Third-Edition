@@ -24,7 +24,8 @@ explicitly, e.g.
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("fonts/Inter-Regular.woff2") format("woff2"), url("fonts/Inter-Regular.woff") format("woff");
+    src: url("fonts/Inter-Regular.woff2") format("woff2"),
+        url("fonts/Inter-Regular.woff") format("woff");
 }
 
 /*Our two Google hosted fonts can be used like this:
@@ -434,7 +435,7 @@ blockquote {
     content: counter(li);
     font-size: 25px;
     font-family: "Oswald", sans-serif;
-    color: #b50404;
+    color: #B50404;
 }
 
 .rwd-Chapter_Content {
@@ -452,7 +453,7 @@ blockquote {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
-    background-color: #262c28;
+    background-color: #262C28;
 }
 
 .rwd-Footer_SectionTitle {

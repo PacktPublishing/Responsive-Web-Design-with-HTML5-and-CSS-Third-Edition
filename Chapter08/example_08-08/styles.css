@@ -14,9 +14,9 @@ body {
 	max-width: 500px;
 }
 
-
 svg {
 	padding: 20px;
+	overflow: visible;
 }
 
 svg path {
@@ -34,7 +34,7 @@ svg text {
 	padding: 2rem;
 	background-color: #444;
 	border-radius: 4px;
-	font-size: .8rem;
+	font-size: 0.8rem;
 	font-family: sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -51,7 +51,7 @@ input {
 	font-size: 1.2rem;
 	line-height: 1.2;
 	border-radius: 4px;
-	margin: .2rem 0 0 auto;
+	margin: 0.2rem 0 0 auto;
 }
 
 .animate {

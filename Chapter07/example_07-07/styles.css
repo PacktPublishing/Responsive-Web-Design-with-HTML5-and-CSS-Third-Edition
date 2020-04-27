@@ -1,8 +1,10 @@
 .bg {
-	background-image: url('bg.jpg');
+   width: 500px;
+   height: 333px;
+   background-image: url("bg.jpg");
 }
 @media (min-resolution: 1.5dppx) {
    .bg {
-      background-image: url('bg@1_5x.jpg');
+      background-image: url("bg@1_5x.jpg");
    }
 }

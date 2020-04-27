@@ -29,6 +29,10 @@ fieldset + fieldset {
   }
 }
 
+.form-Intro {
+  padding-bottom: 10px;
+}
+
 .form-Intro h1 {
   margin-bottom: 0;
 }
@@ -57,7 +61,7 @@ fieldset + fieldset {
     flex-direction: row-reverse;
     align-items: center;
   }
-  .form-Input_Wrapper input:not([type='range']):not([type='color']) {
+  .form-Input_Wrapper input:not([type="range"]):not([type="color"]) {
     flex: 0 0 50%;
   }
   .form-Input_Wrapper label {
@@ -105,7 +109,7 @@ legend span {
   display: inline-flex;
 }
 
-input:not([type='range']),
+input:not([type="range"]),
 textarea {
   min-height: 40px;
   padding: 2px;
@@ -121,7 +125,7 @@ textarea {
   caret-color: var(--caretColor);
 }
 
-input:not([type='range']):focus,
+input:not([type="range"]):focus,
 textarea:focus {
   background-position: 0 0, 0 0;
 }
@@ -132,7 +136,7 @@ input:placeholder-shown {
 }
 
 /*This changes the color of placeholder text when the input gets focused*/
-input:not([type='range']):focus:placeholder-shown {
+input:not([type="range"]):focus:placeholder-shown {
   color: #555;
 }
 
@@ -143,10 +147,10 @@ input:not([type='range']):focus:placeholder-shown {
 .form-About_Wrapper legend {
   background-color: #cc3232;
 }
-.form-About_Wrapper input:not([type='range']) {
+.form-About_Wrapper input:not([type="range"]) {
   box-shadow: inset 0 -3px 0 #cc3232;
 }
-.form-About_Wrapper input:not([type='range']):focus {
+.form-About_Wrapper input:not([type="range"]):focus {
   border: 1px solid #cc3232;
   box-shadow: inset 0 -3px 0 #cc3232, 0 0 15px 5px #ebebeb;
 }
@@ -158,7 +162,7 @@ input:not([type='range']):focus:placeholder-shown {
 .form-What_Wrapper legend {
   background-color: #739327;
 }
-.form-What_Wrapper input:not([type='range']) {
+.form-What_Wrapper input:not([type="range"]) {
   box-shadow: inset 0 -3px 0 #739327;
 }
 .form-What_Wrapper input:focus {
@@ -173,7 +177,7 @@ input:not([type='range']):focus:placeholder-shown {
 .form-You_Wrapper legend {
   background-color: #236a7e;
 }
-.form-You_Wrapper input:not([type='range']) {
+.form-You_Wrapper input:not([type="range"]) {
   box-shadow: inset 0 -3px 0 #236a7e;
 }
 .form-You_Wrapper input:focus {
@@ -188,13 +192,13 @@ input:not([type='range']):focus:placeholder-shown {
 
 /*Now we want some basic styling to indicate that fields are required, valid or invalid*/
 input:required + label:after {
-  content: '*';
+  content: "*";
   font-size: 2.1em;
   position: relative;
   top: 6px;
   display: inline-flex;
   margin-left: 0.2ch;
-  transition: color, 1s;
+  transition: color 1s;
 }
 
 input:required:invalid + label:after {

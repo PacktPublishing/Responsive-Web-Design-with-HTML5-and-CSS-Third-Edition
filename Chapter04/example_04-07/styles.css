@@ -2,7 +2,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Oswald', sans-serif;
+	font-family: "Oswald", sans-serif;
 	color: #ebebeb;
 }
 
@@ -14,9 +14,9 @@ body {
 	width: 100%;
 }
 
-.FlexItems {
+.FlexItem {
 	border: 1px solid #ebebeb;
-	background-color: #34005B;
+	background-color: #34005b;
 	display: flex;
 	height: 100px;
 }

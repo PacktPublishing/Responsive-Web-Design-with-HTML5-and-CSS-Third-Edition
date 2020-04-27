@@ -12,7 +12,8 @@ body {
   height: 1024px;
   width: 1024px;
   margin: 0 auto;
-  mask-image: url('mars-text-mask.png');
+  -webkit-mask-image: url("mars-text-mask.png");
+  mask-image: url("mars-text-mask.png");
   animation: moveMask 6s infinite alternate;
 }
 
