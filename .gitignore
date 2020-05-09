@@ -49,8 +49,7 @@ Thumbs.db
 *.sublime-workspace
 /.vscode
 
-# Ignore the build/dist directory
-/_build
+# Ignore caches directory
 /dist
 /.cache
 
