@@ -20,10 +20,12 @@
 *.tar
 *.zip
 
-# Too Effing big #
+# Node related #
 ##################
-*.psd
 node_modules
+package-lock.json
+
+
 
 # Logs and databases #
 ######################
@@ -47,18 +49,7 @@ Thumbs.db
 *.sublime-workspace
 /.vscode
 
-# Sass Cache remove #
-#####################
-*.sass-cache
-/.sass-cache
-
-# Middleman Specific #
-#####################
-# Ignore bundler config
-/.bundle
-
 # Ignore the build/dist directory
-/build
 /_build
 /dist
 /.cache
@@ -71,9 +62,6 @@ Thumbs.db
 *.exe
 *.o
 *.so
-
-# Don't include Sketch files
-*.sketch
 
 # No Vim temp files
 *~
