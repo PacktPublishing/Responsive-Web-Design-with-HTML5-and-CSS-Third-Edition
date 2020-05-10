@@ -36,7 +36,14 @@ explicitly, e.g.
 :root {
     --grad: linear-gradient(63deg, #262626 23%, transparent 23%) 7px 0,
         linear-gradient(63deg, transparent 73%, #262626 76%),
-        linear-gradient(63deg, transparent 34%, #262626 38%, #262626 58%, transparent 62%), #222;
+        linear-gradient(
+            63deg,
+            transparent 34%,
+            #262626 38%,
+            #262626 58%,
+            transparent 62%
+        ),
+        #222;
 }
 
 html {
@@ -632,7 +639,9 @@ body {
     justify-content: space-evenly;
     @media (min-width: 1000px) {
         display: grid;
-        grid-template-columns: calc(50vw - 500px) repeat(5, 1fr) calc(50vw - 500px);
+        grid-template-columns: calc(50vw - 500px) repeat(5, 1fr) calc(
+                50vw - 500px
+            );
         grid-template-rows: 70px;
         background-color: rgba(255, 255, 255, 0.25);
     }
@@ -699,7 +708,9 @@ body {
     @media (min-width: 1000px) {
         display: grid;
         padding: 3rem 0;
-        grid-template-columns: calc(50vw - 500px) repeat(6, 1fr) calc(50vw - 500px);
+        grid-template-columns: calc(50vw - 500px) repeat(6, 1fr) calc(
+                50vw - 500px
+            );
         grid-template-rows: 50px auto 50px;
         background: var(--grad);
         background-size: 16px 48px;
@@ -768,6 +779,14 @@ blockquote {
     display: inline-flex;
     flex-direction: column;
     vertical-align: middle;
+    a {
+        color: #fff;
+        text-decoration-line: underline;
+        text-decoration-skip: ink;
+        text-decoration-color: #b50404;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2px;
+    }
 }
 
 .rwd-Review p {
@@ -832,7 +851,9 @@ blockquote {
     @media (min-width: 1000px) {
         display: grid;
         padding: 6rem 0 3rem;
-        grid-template-columns: calc(50vw - 500px) repeat(6, 1fr) calc(50vw - 500px);
+        grid-template-columns: calc(50vw - 500px) repeat(6, 1fr) calc(
+                50vw - 500px
+            );
         grid-template-rows: 50px auto auto auto auto;
     }
 }
@@ -957,7 +978,9 @@ blockquote {
     @media (min-width: 1000px) {
         display: grid;
         padding: 3rem 0;
-        grid-template-columns: calc(50vw - 500px) repeat(2, 1fr) calc(50vw - 500px);
+        grid-template-columns: calc(50vw - 500px) repeat(2, 1fr) calc(
+                50vw - 500px
+            );
         grid-template-rows: auto;
     }
 }
@@ -1155,7 +1178,9 @@ blockquote {
     background-size: 16px 48px;
     @media (min-width: 1000px) {
         display: grid;
-        grid-template-columns: calc(50vw - 500px) repeat(6, 1fr) calc(50vw - 500px);
+        grid-template-columns: calc(50vw - 500px) repeat(6, 1fr) calc(
+                50vw - 500px
+            );
         grid-template-rows: auto;
         padding: 0 0 30px;
     }
