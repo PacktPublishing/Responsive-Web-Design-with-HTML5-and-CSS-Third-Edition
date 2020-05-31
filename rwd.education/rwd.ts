@@ -34,7 +34,7 @@ class easyCarousel {
         this.prevBtn.addEventListener("click", this.processClick);
         this.random = window.setInterval(this.autoMoveContainer, this.duration);
 
-        window.addEventListener("resize", e => {
+        window.addEventListener("resize", (e) => {
             this.moveContainer(this.currentIdx);
         });
     }
@@ -43,18 +43,21 @@ class easyCarousel {
         this.currentIdx = Math.floor(Math.random() * (this.maxIdx + 1));
         this.moveContainer(this.currentIdx);
     };
-    processClick = e => {
+    processClick = (e) => {
         // You are interacting with it, so stop random movement
         window.clearInterval(this.random);
         this.polarity = e.target === this.nextBtn ? "+" : "-";
         if (this.polarity === "+") {
-            this.currentIdx = this.currentIdx++ >= this.maxIdx ? this.maxIdx : this.currentIdx++;
+            this.currentIdx =
+                this.currentIdx++ >= this.maxIdx
+                    ? this.maxIdx
+                    : this.currentIdx++;
         } else {
             this.currentIdx = this.currentIdx-- <= 0 ? 0 : this.currentIdx--;
         }
         this.moveContainer(this.currentIdx);
     };
-    moveContainer = num => {
+    moveContainer = (num) => {
         const containerWidth = this.container.getBoundingClientRect().width;
         // Set the prev button
         num > 0
@@ -65,7 +68,10 @@ class easyCarousel {
             ? this.nextBtn.removeAttribute("disabled")
             : this.nextBtn.setAttribute("disabled", "");
         // Set the transform distance
-        this.container.style.setProperty("--Dist", `-${containerWidth * num}px`);
+        this.container.style.setProperty(
+            "--Dist",
+            `-${containerWidth * num}px`
+        );
     };
 }
 
@@ -87,20 +93,24 @@ new easyCarousel(imgNext, imgPrev, imgContainer, imgItems, 8000);
 
 const codeDropBtn = document.querySelector("button.rwd-Nav_Link");
 const downloadPanel = document.getElementById("downloadPanel");
-const downloadPanelClickMask = document.getElementById("downloadPanelClickMask");
+const downloadPanelClickMask = document.getElementById(
+    "downloadPanelClickMask"
+);
 
-codeDropBtn.addEventListener("pointerdown", () => {
+codeDropBtn.addEventListener("click", () => {
     downloadPanel.setAttribute(
         "aria-hidden",
         downloadPanel.getAttribute("aria-hidden") === "true" ? "false" : "true"
     );
     downloadPanelClickMask.setAttribute(
         "data-active",
-        downloadPanelClickMask.getAttribute("data-active") === "true" ? "false" : "true"
+        downloadPanelClickMask.getAttribute("data-active") === "true"
+            ? "false"
+            : "true"
     );
 });
 
-downloadPanelClickMask.addEventListener("pointerdown", () => {
+downloadPanelClickMask.addEventListener("click", () => {
     downloadPanel.setAttribute("aria-hidden", "true");
     downloadPanelClickMask.setAttribute("data-active", "false");
 });
