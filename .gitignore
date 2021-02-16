@@ -43,6 +43,7 @@ package-lock.json
 Icon?
 ehthumbs.db
 Thumbs.db
+__MACOSX
 
 # Text editor files
 *.sublime-project
