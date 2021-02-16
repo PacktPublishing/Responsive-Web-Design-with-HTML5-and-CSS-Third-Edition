@@ -10,13 +10,16 @@ document.documentElement.classList.remove("no-js");
  * [items]
  *
  */
+// @ts-ignore
 var easyCarousel = /** @class */ (function () {
+    // @ts-ignore
     function easyCarousel(nextBtn, prevBtn, container, items, duration) {
         var _this = this;
         this.autoMoveContainer = function () {
             _this.currentIdx = Math.floor(Math.random() * (_this.maxIdx + 1));
             _this.moveContainer(_this.currentIdx);
         };
+        // @ts-ignore
         this.processClick = function (e) {
             // You are interacting with it, so stop random movement
             window.clearInterval(_this.random);
@@ -29,6 +32,7 @@ var easyCarousel = /** @class */ (function () {
             }
             _this.moveContainer(_this.currentIdx);
         };
+        // @ts-ignore
         this.moveContainer = function (num) {
             var containerWidth = _this.container.getBoundingClientRect().width;
             // Set the prev button
@@ -53,7 +57,7 @@ var easyCarousel = /** @class */ (function () {
         this.nextBtn.addEventListener("click", this.processClick);
         this.prevBtn.addEventListener("click", this.processClick);
         this.random = window.setInterval(this.autoMoveContainer, this.duration);
-        window.addEventListener("resize", function (e) {
+        window.addEventListener("resize", function () {
             _this.moveContainer(_this.currentIdx);
         });
     }

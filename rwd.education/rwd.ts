@@ -1,3 +1,4 @@
+
 // First of all, remove the no-js class:
 document.documentElement.classList.remove("no-js");
 
@@ -11,6 +12,7 @@ document.documentElement.classList.remove("no-js");
  * [items]
  *
  */
+// @ts-ignore
 class easyCarousel {
     nextBtn: HTMLElement;
     prevBtn: HTMLElement;
@@ -21,6 +23,7 @@ class easyCarousel {
     currentIdx: number;
     polarity: string;
     random: any;
+    // @ts-ignore
     constructor(nextBtn, prevBtn, container, items, duration) {
         this.nextBtn = nextBtn;
         this.prevBtn = prevBtn;
@@ -34,7 +37,7 @@ class easyCarousel {
         this.prevBtn.addEventListener("click", this.processClick);
         this.random = window.setInterval(this.autoMoveContainer, this.duration);
 
-        window.addEventListener("resize", e => {
+        window.addEventListener("resize", () => {
             this.moveContainer(this.currentIdx);
         });
     }
@@ -43,6 +46,7 @@ class easyCarousel {
         this.currentIdx = Math.floor(Math.random() * (this.maxIdx + 1));
         this.moveContainer(this.currentIdx);
     };
+    // @ts-ignore
     processClick = e => {
         // You are interacting with it, so stop random movement
         window.clearInterval(this.random);
@@ -54,6 +58,7 @@ class easyCarousel {
         }
         this.moveContainer(this.currentIdx);
     };
+    // @ts-ignore
     moveContainer = num => {
         const containerWidth = this.container.getBoundingClientRect().width;
         // Set the prev button

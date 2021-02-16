@@ -10,6 +10,7 @@ var del = require("del");
 var postcssAssets = require("postcss-assets");
 var postcssColorFunction = require("postcss-color-function");
 var ts = require("gulp-typescript");
+var tsProject = ts.createProject("tsconfig.json");
 var cssnano = require("cssnano");
 
 const server = browserSync.create();
@@ -84,8 +85,8 @@ function fonts(fin) {
     fin();
 }
 
-function tsProcess(fin) {
-    gulp.src("./*.ts")
+function tsProcess() {
+    return gulp.src("./*.ts")
         .pipe(
             ts({
                 noImplicitAny: true,
@@ -95,13 +96,12 @@ function tsProcess(fin) {
             })
         )
         .pipe(gulp.dest("_build/"));
-    fin();
 }
 
 const dev = gulp.series(
     clean,
     serve,
     gulp.parallel(html, img, favicon, tsProcess, css, fonts),
-    gulp.parallel(watchCSS, watchTs, watchHtml)
+    gulp.parallel(watchCSS, watchTs, watchHtml),
 );
 exports.default = dev;
