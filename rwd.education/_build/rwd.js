@@ -25,7 +25,10 @@ var easyCarousel = /** @class */ (function () {
             window.clearInterval(_this.random);
             _this.polarity = e.target === _this.nextBtn ? "+" : "-";
             if (_this.polarity === "+") {
-                _this.currentIdx = _this.currentIdx++ >= _this.maxIdx ? _this.maxIdx : _this.currentIdx++;
+                _this.currentIdx =
+                    _this.currentIdx++ >= _this.maxIdx
+                        ? _this.maxIdx
+                        : _this.currentIdx++;
             }
             else {
                 _this.currentIdx = _this.currentIdx-- <= 0 ? 0 : _this.currentIdx--;
@@ -57,7 +60,7 @@ var easyCarousel = /** @class */ (function () {
         this.nextBtn.addEventListener("click", this.processClick);
         this.prevBtn.addEventListener("click", this.processClick);
         this.random = window.setInterval(this.autoMoveContainer, this.duration);
-        window.addEventListener("resize", function () {
+        window.addEventListener("resize", function (e) {
             _this.moveContainer(_this.currentIdx);
         });
     }
@@ -79,11 +82,13 @@ new easyCarousel(imgNext, imgPrev, imgContainer, imgItems, 8000);
 var codeDropBtn = document.querySelector("button.rwd-Nav_Link");
 var downloadPanel = document.getElementById("downloadPanel");
 var downloadPanelClickMask = document.getElementById("downloadPanelClickMask");
-codeDropBtn.addEventListener("pointerdown", function () {
+codeDropBtn.addEventListener("click", function () {
     downloadPanel.setAttribute("aria-hidden", downloadPanel.getAttribute("aria-hidden") === "true" ? "false" : "true");
-    downloadPanelClickMask.setAttribute("data-active", downloadPanelClickMask.getAttribute("data-active") === "true" ? "false" : "true");
+    downloadPanelClickMask.setAttribute("data-active", downloadPanelClickMask.getAttribute("data-active") === "true"
+        ? "false"
+        : "true");
 });
-downloadPanelClickMask.addEventListener("pointerdown", function () {
+downloadPanelClickMask.addEventListener("click", function () {
     downloadPanel.setAttribute("aria-hidden", "true");
     downloadPanelClickMask.setAttribute("data-active", "false");
 });

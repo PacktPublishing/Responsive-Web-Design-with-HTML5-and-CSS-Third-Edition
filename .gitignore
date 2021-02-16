@@ -54,6 +54,9 @@ __MACOSX
 /dist
 /.cache
 
+# Ignore SFTP config
+sftp-config.json
+
 # Compiled source #
 ###################
 *.com
