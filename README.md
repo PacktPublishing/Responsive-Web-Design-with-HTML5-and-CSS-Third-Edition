@@ -26,3 +26,7 @@ If you are curious and 'don't mind getting your hands dirty', included in the fo
 -   Assuming all installs OK (cross all your digits!), after everything is installed, you should now be able to run 'gulp' from the Terminal and away you go.
 
 Problems? Open an issue, Tweet at me or send me a mail. Happy building!
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781839211560">https://packt.link/free-ebook/9781839211560 </a> </p>
