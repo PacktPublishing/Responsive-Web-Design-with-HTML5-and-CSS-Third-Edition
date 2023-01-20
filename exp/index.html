@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning HTML5</title>
+</head>
+<body>
+<h1>HTML5 tags</h1>
+<div>
+  <h1>Link tag</h1>
+  <p>Used to link to another document.</p>
+  <a href="https://www.google.com/" target="_blank">This is a link to Google.com!</a>
+</div>
+
+<div>
+  <h1>sup and sub tag</h1>
+  <p>These are used to create superscript and subscript.</p>
+  <p>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+  <br/>
+  Water's chemical representation is HO<sub>2</sub>.
+</div>
+
+<div>
+  <h1>P, strong, em</h1>
+  <p>
+    This is <strong>very important message</strong>. That needs to be conveyed to the team <em>asap</em>.
+  </p>
+</div>
+
+<div>
+  <h1>Special characters</h1>
+  <p>Here is the full list available of <a href="https://dev.w3.org/html5/html-author/charref" target="_blank" alt="HTML5 characters">HTML5 characters</a>. </p>
+  <p>
+    Here are a few special characters.
+    &cupdot; Copyright <sup>&copy</sup>; &le; &leftarrow; &plusacir;
+  </p>
+</div>
+
+
+<div>
+  <h1>Lists</h1>
+  <p>Unordered list</p>
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Gauva</li>
+    <li>Kiwi</li>
+  </ul>
+  <p>Ordered list</p>
+  <ol>
+    <li>Panchdev</li>
+    <li>Mahal</li>
+    <li>Dalpat</li>
+    <li>Aryan</li>
+    <li>Avyan</li>
+  </ol>
+</div>
+
+<nav>
+  <h1>Navigation links</h1>
+  <a href="#">First</a> | <a href="#">Previous</a> | <a href="#">1</a> | <a href="#">2</a> ... <a href="#">5</a> | <a href="#">6</a> | <a href="#">Next</a> | <a href="#">Last</a>
+</nav>
+
+<div>
+  <h1>Table tag</h1>
+  <table>
+    <tr>
+      <th>Roll No.</th>
+      <th>Student Name</th>
+      <th>Percentage</th>
+    </tr>
+    <tr>
+      <td>1001</td>
+      <td>Aryan Singh Chauhan</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>1002</td>
+      <td>Avyan Singh Chauhan</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>1003</td>
+      <td>Dalpat</td>
+      <td>100%</td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <h1>Form tag</h1>
+  <p>Here is the link to <a href="https://www.w3.org/TR/html401/interact/forms.html" target="_blank">forms w3c specification</a></p>
+  <FORM action="http://somesite.com/prog/adduser" method="post">
+    <P>
+      <LABEL for="firstname">First name : </LABEL>
+      <INPUT type="text" id="firstname"><BR>
+      <LABEL for="lastname">Last name: </LABEL>
+      <INPUT type="text" id="lastname"><BR>
+      <LABEL for="email" accesskey="e">Email: </LABEL>
+      <INPUT type="text" id="email"><BR>
+      <INPUT type="radio" name="sex" value="Male"> Male
+      <INPUT type="radio" name="sex" value="Female"> Female<BR>
+      <INPUT type="checkbox" name="social-media-presence" value="facebook" > Facebook
+      <INPUT type="checkbox" name="social-media-presence" value="instagram"> Instagram
+      <INPUT type="checkbox" name="social-media-presence" value="twitter"> Twitter<br/>
+      <LABEL for="brief"> Brief:</LABEL>
+      <TEXTAREA id="brief"></TEXTAREA><BR/>
+    </P>
+
+    <P>
+      <SELECT multiple size="4" name="component-select">
+        <OPTION selected value="Component_1_a">Component_1</OPTION>
+        <OPTION selected value="Component_1_b">Component_2</OPTION>
+        <OPTION>Component_3</OPTION>
+        <OPTION>Component_4</OPTION>
+        <OPTION>Component_5</OPTION>
+        <OPTION>Component_6</OPTION>
+        <OPTION>Component_7</OPTION>
+      </SELECT>
+      <INPUT type="submit" value="Send"><INPUT type="reset">
+    </P>
+
+    <p>
+      <SELECT name="ComOS">
+        <OPTION selected label="none" value="none">None</OPTION>
+        <OPTGROUP label="PortMaster 3">
+          <OPTION label="3.7.1" value="pm3_3.7.1">PortMaster 3 with ComOS 3.7.1</OPTION>
+          <OPTION label="3.7" value="pm3_3.7">PortMaster 3 with ComOS 3.7</OPTION>
+          <OPTION label="3.5" value="pm3_3.5">PortMaster 3 with ComOS 3.5</OPTION>
+        </OPTGROUP>
+        <OPTGROUP label="PortMaster 2">
+          <OPTION label="3.7" value="pm2_3.7">PortMaster 2 with ComOS 3.7</OPTION>
+          <OPTION label="3.5" value="pm2_3.5">PortMaster 2 with ComOS 3.5</OPTION>
+        </OPTGROUP>
+        <OPTGROUP label="IRX">
+          <OPTION label="3.7R" value="IRX_3.7R">IRX with ComOS 3.7R</OPTION>
+          <OPTION label="3.5R" value="IRX_3.5R">IRX with ComOS 3.5R</OPTION>
+        </OPTGROUP>
+      </SELECT>
+    </p>
+    <br/>
+    <P>
+    <FIELDSET>
+      <LEGEND>Personal Information</LEGEND>
+      Last Name: <INPUT name="personal_lastname" type="text" tabindex="1">
+      First Name: <INPUT name="personal_firstname" type="text" tabindex="2">
+      Address: <INPUT name="personal_address" type="text" tabindex="3">
+      ...more personal information...
+    </FIELDSET>
+    <FIELDSET>
+      <LEGEND>Medical History</LEGEND>
+      <INPUT name="history_illness"
+             type="checkbox"
+             value="Smallpox" tabindex="20"> Smallpox
+      <INPUT name="history_illness"
+             type="checkbox"
+             value="Mumps" tabindex="21"> Mumps
+      <INPUT name="history_illness"
+             type="checkbox"
+             value="Dizziness" tabindex="22"> Dizziness
+      <INPUT name="history_illness"
+             type="checkbox"
+             value="Sneezing" tabindex="23" checked="checked"> Sneezing 
+      ...more medical history...
+    </FIELDSET>
+    <FIELDSET>
+      <LEGEND>Current Medication</LEGEND>
+      Are you currently taking any medication?
+      <INPUT name="medication_now"
+             type="radio"
+             value="Yes" tabindex="35">Yes
+      <INPUT name="medication_now"
+             type="radio"
+             value="No" tabindex="35">No
+
+      If you are currently taking medication, please indicate
+      it in the space below:
+      <TEXTAREA name="current_medication"
+                rows="20" cols="50"
+                tabindex="40">
+  </TEXTAREA>
+    </FIELDSET>
+    <br/>
+
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    
+  </FORM>
+  <div>
+    <h1>By default select for checkbox and radio button using: <i>Checked</i> property and same value</h1>
+    <input type="checkbox" name="name_checkbox" value="checkbox_value" checked="checked">Facebook <BR>
+      <input type="radio" checked="checked" name="name_radio" value="value_radio">Instagram
+  </div>
+  <p> this is shortcuts for windows :<a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">Keyboard shortcuts for windows</a>
+  <p> this is shortcuts for MacOS :<a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">Keyboard shortcuts for MacOS</a>
+
+    <h1>hello all</h1>
+    <h1>hello all</h1>
+    <h1>hello all</h1>
+    <h1>hello all</h1>
+</div>
+</body>
+</html>

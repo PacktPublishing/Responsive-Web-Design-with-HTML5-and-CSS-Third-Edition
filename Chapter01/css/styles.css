@@ -59,11 +59,11 @@ img {
 }
 
 .MethodWrapper li:after {
-	content: "✼";
+	content: "*";
 	display: block;
 	text-align: center;
 	margin: 1rem 0 0.5rem 0;
-	color: #eee;
+	color: deeppink;
 }
 
 @media screen and (min-width: 800px) {
